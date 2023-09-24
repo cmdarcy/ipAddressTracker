@@ -1,0 +1,12 @@
+:root {
+	--VeryDarkGray: hsl(0, 0%, 17%);
+	--DarkGray: hsl(0, 0%, 59%);
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
