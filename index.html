@@ -3,34 +3,55 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- displays site properly based on user's device -->
-
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
 			href="./images/favicon-32x32.png"
 		/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="./styles/normalize.css" />
 		<link rel="stylesheet" href="./styles/styles.css" />
 		<title>Frontend Mentor | IP Address Tracker</title>
 	</head>
 	<body>
-		<h1>IP Address Tracker</h1>
-		<form action=""><input type="text" placeholder="Search for any IP address or domain"></input></form>
-		<div class="results-container">
-      <h2>IP Address</h2> 
-      <h2>Location</h2> 
-      <h2>Timezone UTC<!-- add offset value dynamically using the API --></h2> 
-      <h2>ISP</h2>
-    </div>
-    <div class="attribution">
+		<main class="content-container">
+      <h1>IP Address Tracker</h1>
+      <form action="">
+        <div class="input-container rounded">
+          <input type="text" placeholder="Search for any IP address or domain">
+          </input>
+          <button class="submitbtn"><img src="./images/icon-arrow.svg" alt=""></button>
+        </div>
+      </form>
+      <div class="results-container rounded">
+            <div>
+              <h2>IP Address</h2>
+              <h3>Placeholder</h3>
+            </div>
+            <div>
+              <h2>Location</h2>
+              <h3>Placeholder</h3>
+            </div>
+            <div>
+              <h2>Timezone <!-- add offset value dynamically using the API --></h2>
+              <h3>UTC Placeholder</h3>
+            </div>
+            <div>
+              <h2>ISP</h2>
+              <h3>Placeholder</h3>
+            </div>
+          </div>
+    </main>
+    <footer class="attribution">
       Challenge by
       <a
         href="https://www.frontendmentor.io?ref=challenge"
         target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </footer>
 	</body>
 </html>
