@@ -12,6 +12,17 @@ const locationResult = document.querySelector("[data-location");
 const timezoneResult = document.querySelector("[data-timezone");
 const ispResult = document.querySelector("[data-isp");
 
+const map = L.map("map").setView([51.505, -0.09], 13);
+const myMarker = L.icon({
+	iconUrl: "./images/icon-location.svg",
+});
+
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+	maxZoom: 19,
+	attribution:
+		'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+}).addTo(map);
+
 searchBtn.addEventListener("click", async (ev) => {
 	ev.preventDefault();
 	const searchPrompt = document.querySelector("[data-search]").value;
@@ -38,14 +49,9 @@ searchBtn.addEventListener("click", async (ev) => {
 	timezoneResult.innerText = "UTC" + resultData.location.timezone;
 	ispResult.innerText = resultData.isp;
 
-	let map = L.map("map").setView(
-		[resultData.location.lat, resultData.location.lng],
-		13
-	);
-
-	L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-		maxZoom: 19,
-		attribution:
-			'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	map.setView([resultData.location.lat, resultData.location.lng], 13);
+	L.marker([resultData.location.lat, resultData.location.lng], {
+		icon: myMarker,
+		title: searchPrompt,
 	}).addTo(map);
 });
