@@ -42,7 +42,7 @@ form {
 }
 
 input {
-	width: 80%;
+	width: 90%;
 	padding: 1em;
 	border: none;
 	background-color: white;
@@ -51,7 +51,7 @@ input {
 
 .submitbtn {
 	height: 100%;
-	width: 20%;
+	width: max(10%, 75px);
 	background-color: var(--VeryDarkGray);
 	border: none;
 	border-radius: 0 20px 20px 0;
