@@ -64,6 +64,12 @@ input {
 	width: 80%;
 }
 
+/* Map */
+#map {
+	height: 800px;
+	width: 100vw;
+}
+
 /* Footer */
 footer {
 	position: absolute;
