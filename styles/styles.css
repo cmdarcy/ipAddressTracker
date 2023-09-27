@@ -35,6 +35,10 @@ main {
 	border-radius: 20px;
 }
 
+.invalid {
+	color: red;
+}
+
 /* Search Bar */
 form {
 	width: 80%;
